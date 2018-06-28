@@ -1,3 +1,4 @@
 #! /usr/bin/python
 
-print "hello word"
+#the first program
+print "hello world"
