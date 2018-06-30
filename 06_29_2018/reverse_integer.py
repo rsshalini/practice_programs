@@ -8,9 +8,17 @@
 
 #function below reverses the integer
 def reverse_integer(num):
-    try:
-        return int(num[::-1])
-    except ValueError:
-        return "Try entering an integer. no alphabets"
+    if len(num) != 3:
+        return "Limit length to 3 digit. Try again."
+    else:
+        try:
+            return int(num[::-1])
+        except ValueError:
+            return "Try entering an integer. no alphabets"
 
-print reverse_integer(raw_input("Enter a 3 digit integer:"))
+
+
+if __name__ == "__main__":
+    print reverse_integer(raw_input("Enter a 3 digit integer:"))
+
+
