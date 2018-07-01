@@ -5,11 +5,12 @@
 import math
 def count_trailing_zero_n_fact(n):
     n_factorial = str(math.factorial(n))
+    reversed_factorial = reversed(n_factorial)
     trailing_zero_count = 0
     if n_factorial.endswith('0'):
-        for i in reversed(n_factorial):
+        for digit in reversed_factorial:
             #print "i", i
-            if i == '0':
+            if digit == '0':
                 trailing_zero_count += 1
                 #print "ct", trailing_zero_count
             else:
