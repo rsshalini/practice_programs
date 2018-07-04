@@ -7,8 +7,9 @@
 
 def step_0(cc_num):
     list_step0 = []
-    for i in range(1, len(cc_num),2):
-        ans = int(cc_num[i])*2
+    reversed_cc_num = reversed(cc_num)
+    for i in range(1, len(reversed_cc_num),2):
+        ans = int(reversed_cc_num[i])*2
         list_step0.append(str(ans))
     #print list_step0
     digits_step0 = ''.join(list_step0)
@@ -19,9 +20,10 @@ def step_0(cc_num):
     return sum_step0
 
 def step_1(cc_num):
+    reversed_cc_num = reversed(cc_num)
     sum_step1 = 0
-    for j in range(0, len(cc_num),2):
-        sum_step1 += int(cc_num[j])
+    for j in range(0, len(reversed_cc_num),2):
+        sum_step1 += int(reversed_cc_num[j])
     return sum_step1
 
 
